@@ -117,8 +117,7 @@ export const Preview: React.FC<PreviewFieldWithProps | {}> = (props) => {
         }}
       >
       <div style={{
-        flex: 1,
-        padding:"5px"
+        flex: 1
       }}>
         <UploadInput
           path={name}
