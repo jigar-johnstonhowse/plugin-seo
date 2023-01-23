@@ -34,5 +34,8 @@
     "dist",
     "types.js",
     "types.d.ts"
-  ]
+  ],
+  "dependencies": {
+    "@types/react-dom": "^18.0.10"
+  }
 }
