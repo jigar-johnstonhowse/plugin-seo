@@ -60,7 +60,11 @@ export const MetaDescription: React.FC<(TextareaFieldWithProps | {}) & {
     pluginConfig,
     locale
   ]);
-
+const  handleChangeInput = (event:any) => {
+  const { value } = event.target;
+  const message = value.slice(0, maxLength);
+  setValue(message);
+}
   return (
     <div
       style={{
@@ -118,12 +122,13 @@ export const MetaDescription: React.FC<(TextareaFieldWithProps | {}) & {
         <TextareaInput
           path={name}
           name={name}
-          onChange={setValue}
+          onChange={handleChangeInput}
           value={value}
           showError={showError}
           style={{
             marginBottom: 0
           }}
+          maxLength={maxLength}
         />
       </div>
       <div

@@ -1,8 +1,8 @@
 {
-  "name": "@payloadcms/plugin-seo",
-  "version": "1.0.10",
+  "name": "@jigar-johnstonhowse/plugin-seo",
+  "version": "1.0.11",
   "homepage:": "https://payloadcms.com",
-  "repository": "git@github.com:payloadcms/plugin-seo.git",
+  "repository": "git@github.com:jigar-johnstonhowse/plugin-seo.git",
   "description": "SEO plugin for Payload CMS",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -36,6 +36,7 @@
     "types.d.ts"
   ],
   "dependencies": {
+    "@types/npm-packlist": "^7.0.0",
     "@types/react-dom": "^18.0.10"
   }
 }

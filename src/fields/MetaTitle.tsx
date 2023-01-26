@@ -59,6 +59,11 @@ export const MetaTitle: React.FC<TextFieldWithProps | {}> = (props) => {
     locale,
   ]);
 
+  const  handleChangeInput = (event:any) => {
+    const { value } = event.target;
+    const message = value.slice(0, maxLength);
+    setValue(message);
+  }
   return (
     <div
       style={{
@@ -117,12 +122,13 @@ export const MetaTitle: React.FC<TextFieldWithProps | {}> = (props) => {
         <TextInputField
           path={name}
           name={name}
-          onChange={setValue}
+          onChange={handleChangeInput}
           value={value}
           showError={showError}
           style={{
             marginBottom: 0
           }}
+          maxLength={maxLength}
         />
       </div>
       <div
