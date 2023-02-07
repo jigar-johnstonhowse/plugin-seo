@@ -47,7 +47,6 @@ export const Preview: React.FC<PreviewFieldWithProps | {}> = (props) => {
   } = fields;
 
   const [href, setHref] = useState<string>();
-
   useEffect(() => {
     const fetchFile = async () => {
       const response = await fetch(`${serverURL}/api/${relationTo}/${metaThumbnail}`, {
@@ -59,7 +58,7 @@ export const Preview: React.FC<PreviewFieldWithProps | {}> = (props) => {
       }
     };
     fetchFile();
-  }, [metaThumbnail]);
+  }, [metaThumbnail,fields]);
 
   useEffect(() => {
     const getHref = async () => {
